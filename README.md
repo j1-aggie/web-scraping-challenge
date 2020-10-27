@@ -6,7 +6,7 @@
 ## Mission to Mars
 * [Background](#background)
 * [Scraping the Web](#Scraping)
-* [MongoDB and Flask Application](#MongoDB and Flask Application)
+* [MongoDB](#MongoDB)
 * [Requirements](#requirements)
 
 ## <a name="background"></a>Background
@@ -25,7 +25,7 @@ For the files created to perform the web scraping for the images and urls, you c
     *  D. Scraped the USGS Astrogeology site [here](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars) 
            to obtain high resolution images for each of Mar's hemispheres. I then found the url for full resolution for each image.  The                image url and image were both saved to the github and were also stored in Python dictionary labeled mars_dict then appended to a            list. 
 
-## <a name="MongoDB and Flask Application"></a>MongoDB and Flask Application
+## <a name="MongoDB"></a>MongoDB and Flask Application
 
 To create the visualization dashboard website, I used HTML, CSS, and Bootstrap. The data was stored in the MongoDB environment. The website is currently deployed to GitHub Pages. The website works on a variety of screen sizes, from mobile to desktop. To check out the visualization dashboard website, you can go [here](https://j1-aggie.github.io/web-scraping-challenge/).  Multiple steps were taken to create a visualization page to view the images found from scraping the web.  
   *  1. Converted my jupyter notebook to a python script titled "scrape_mars.py" with a function called "scrape". Next, I created a route 
