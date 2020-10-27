@@ -6,7 +6,7 @@
 ## Mission to Mars
 * [Background](#background)
 * [Scraping the Web](#Scraping)
-* [Visualization Dashboard Website](#MongoDB and Falsk Application)
+* [MongoDB and Flask Application](#MongoDB and Flask Application)
 * [Requirements](#requirements)
 
 ## <a name="background"></a>Background
