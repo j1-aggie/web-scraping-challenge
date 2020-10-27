@@ -3,7 +3,7 @@
 
 
 
-## Power Lifting Visualization Dashboard
+## Mission to Mars
 * [Background](#background)
 * [Scraping the Web](#Scraping)
 * [Visualization Dashboard Website](#MongoDB and Falsk Application)
