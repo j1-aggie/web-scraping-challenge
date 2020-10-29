@@ -12,6 +12,7 @@ def init_browser():
     return Browser('chrome', **executable_path, headless=False)
 
 def scrape():
+
     browser = init_browser()
     
     # Mars News URL of page to be scraped
@@ -19,11 +20,13 @@ def scrape():
     browser.visit(url)
     html = browser.html
     soup = bs(html, "html.parser")
+
     # Retrieve the latest news title and paragraph
     data = soup.find("li", class_="slide")
     news_title = data.find('div', class_='content_title').a.text
     news_paragraph = data.find('div', class_='article_teaser_body').text
 
+    
     # Mars Image to be scraped
     # jpl_nasa_url = 'https://www.jpl.nasa.gov'
     img_url = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
@@ -36,12 +39,18 @@ def scrape():
 
     # Mars facts to be scraped, converted into html table
     facts_url = "https://www.space-facts.com/mars/"
-
+    browser.visit(facts_url)
+    html = browser.html
+    soup = bs(html, 'html.parser')
     table = pd.read_html(facts_url)
     facts_df = table[0]
     facts_df.columns = ["description", "value"]
     facts_df.set_index("description", inplace=True)
+    facts_df.to_html('table.html')
     facts_html = facts_df.to_html()
+    
+    
+   
     
     
     # Mars hemisphere name and image to be scraped
@@ -56,6 +65,7 @@ def scrape():
     # Mars hemispheres products data
     #all_mars_hemispheres = hemispheres_soup.find('div', class_='collapsible results')
     #mars_hemispheres = all_mars_hemispheres.find_all('div', class_='item')
+    
     hemisphere_img_urls = []
     # Iterate through each hemisphere data
     for d in data:
@@ -85,9 +95,10 @@ def scrape():
         "news_title": news_title,
         "news_paragraph": news_paragraph,
         "featured_image_url": featured_image_url,
-        #"html_table": facts_html,
-        #"hemisphere_img_urls": hemisphere_img_urls
+        "html_table": facts_html,        
+        "hemisphere_img_urls": hemisphere_img_urls
     }
 
+       
     browser.quit()
     return mars_data

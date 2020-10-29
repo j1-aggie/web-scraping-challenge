@@ -28,13 +28,11 @@
             <h2>Featured Mars Image</h2>
             <img src="{{mars_data.featured_image_url}}" width="720" height="650" alt="mars">
         </div>
-
         <div class="col-md-4">
-            
             <div class="table">
                 <h3>Mars Facts</h3>
-                <p>{{mars_data.facts_html}}</p>
-            </div>
+                <p>{{mars_data.html_table|safe}}</p>
+            </div>  
         </div>
     </div>
     <!--display the hemispheres' images and titles-->
