@@ -20,7 +20,7 @@ For the files created to perform the web scraping for the images and urls, you c
     *  A. Scraped the [NASA Mars News Site](https://mars.nasa.gov/news/) and collected the latest news title and paragraph text.  Assigned 
            text to variables that could be referenced later. 
     *  B. Scraped the [JPL NASA GOV](https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars) using splinter to navigate the site and  
-           find the image url for the current Featured Mars Image and assigned the url string to my variable called [here]                                  (https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars).
+           find the image url for the current Featured Mars Image and assigned the url string to my variable called [here](https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars).
     *  C. Scraped the Mars Fact Page [here](https://space-facts.com/mars/) and used pandas to scrape the table containing facts about the              planet including Diameter, Mass, etc. Then the data was converted to a HTML table string. 
     *  D. Scraped the USGS Astrogeology site [here](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars) 
            to obtain high resolution images for each of Mar's hemispheres. I then found the url for full resolution for each image.  The                image url and image were both saved to the github and were also stored in Python dictionary labeled mars_dict then appended to a            list. 
