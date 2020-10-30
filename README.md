@@ -43,7 +43,6 @@ The website consists of the following:
   * the code to scrape the web for urls and visuals.
   * screenshots of visuals and final applications.
 * A [page]for each visualization containing:
-  * A descriptive title and heading.
-  * The visualization.
-  * A paragraph describing the plot and its significance.
+  * A landing page with a visual and table with a scrape button.
+  * A second page that shows the hemisphers.
  
