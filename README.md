@@ -27,7 +27,7 @@ For the files created to perform the web scraping for the images and urls, you c
 
 ## <a name="MongoDB"></a>MongoDB and Flask Application
 
-To create the visualization dashboard website, I used HTML, CSS, and Bootstrap. The data was stored in the MongoDB environment. The website is currently deployed to GitHub Pages. The website works on a variety of screen sizes, from mobile to desktop. To check out the visualization dashboard website, you can go [here](https://j1-aggie.github.io/web-scraping-challenge/).  Multiple steps were taken to create a visualization page to view the images found from scraping the web.  
+To create the visualization dashboard website, I used HTML, CSS, and Bootstrap. The data was stored in the MongoDB environment. The website is currently deployed to GitHub Pages. The website works on a variety of screen sizes, from mobile to desktop. To check out the visualization dashboard website, you can go [here](https://j1-aggie.github.io/web_scraping_challenge/).  Multiple steps were taken to create a visualization page to view the images found from scraping the web.  
   *  1. Converted my jupyter notebook to a python script titled "scrape_mars.py" with a function called "scrape". Next, I created a route 
        called "/scrape" that imports my python script and calls on my scrape function.  Information that is returned is stored in Mongo as a        Python dictionary.  Then I created a root "/" that queries my Mongo database and passes the mars data into a HTML template to display        the data.
        
